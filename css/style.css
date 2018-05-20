@@ -1,25 +1,25 @@
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display');
 
 @font-face {
-   font-family: 'PFFuturaNeuBook';
-      src: url('../fonts/PFFuturaNeuBook-Regular.eot');
-      src: url('../fonts/PFFuturaNeuBook-Regular.eot?#iefix') format('embedded-opentype'),
-           url('../fonts/PFFuturaNeuBook-Regular.woff') format('woff'),
-           url('../fonts/PFFuturaNeuBook-Regular.ttf') format('truetype'),
-           url('../fonts/PFFuturaNeuBook-Regular.svg#PFFuturaNeuBook-Regular') format('svg');
-   font-weight: normal;
-   font-style: normal;
+	font-family: 'PFFuturaNeuBook';
+	  src: url('../fonts/PFFuturaNeuBook-Regular.eot');
+	  src: url('../fonts/PFFuturaNeuBook-Regular.eot?#iefix') format('embedded-opentype'),
+	       url('../fonts/PFFuturaNeuBook-Regular.woff') format('woff'),
+	       url('../fonts/PFFuturaNeuBook-Regular.ttf') format('truetype'),
+	       url('../fonts/PFFuturaNeuBook-Regular.svg#PFFuturaNeuBook-Regular') format('svg');
+	font-weight: normal;
+	font-style: normal;
 }
 
 @font-face {
-   font-family: 'PFFuturaNeuMedium';
-      src: url('../fonts/PFFuturaNeuMedium-Regular.eot');
-      src: url('../fonts/PFFuturaNeuMedium-Regular.eot?#iefix') format('embedded-opentype'),
-           url('../fonts/PFFuturaNeuMedium-Regular.woff') format('woff'),
-           url('../fonts/PFFuturaNeuMedium-Regular.ttf') format('truetype'),
-           url('../fonts/PFFuturaNeuMedium-Regular.svg#PFFuturaNeuMedium-Regular') format('svg');
-   font-weight: normal;
-   font-style: normal;
+	font-family: 'PFFuturaNeuMedium';
+	  src: url('../fonts/PFFuturaNeuMedium-Regular.eot');
+	  src: url('../fonts/PFFuturaNeuMedium-Regular.eot?#iefix') format('embedded-opentype'),
+	       url('../fonts/PFFuturaNeuMedium-Regular.woff') format('woff'),
+	       url('../fonts/PFFuturaNeuMedium-Regular.ttf') format('truetype'),
+	       url('../fonts/PFFuturaNeuMedium-Regular.svg#PFFuturaNeuMedium-Regular') format('svg');
+	font-weight: normal;
+	font-style: normal;
 }
 
 
@@ -43,6 +43,8 @@
 .first {padding-left: 0;}
 .last {padding-right: 0;}
 .p-relative {position: relative;}
+.p-absolute {position: absolute;}
+.fz-90 {font-size: 90px;}
 
 a.selected {font-weight: bold;}
 
@@ -50,13 +52,11 @@ a.selected {font-weight: bold;}
 
 .page-header {
 	background: url('../images/header-bg.jpg') 50% 0% no-repeat;
-	/* Resize the background image to make sure the image is fully visible */
 	background-size: contain;
 }
 
 footer {
 	background: url('../images/footer-bg.jpg') 50% 100% no-repeat;
-	/* Resize the background image to make sure the image is fully visible */
 	background-size: cover;
 
 }
@@ -65,14 +65,13 @@ footer {
 
 .site__nav {
 	margin-top: 40px;
-	/* font: normal 400 14px/25px "Open Sans",sans-serif; */
 	font-family: 'PFFuturaNeuBook', sans-serif;
 	font-size: 14px;
 	font-weight: normal;
 	font-style: normal;
 	font-stretch: normal;
 	line-height: 1.21;
-	/* letter-spacing: 150px; */
+	 letter-spacing: 1.5px;; 
 	text-align: left;
 	color: #252623;
 }
@@ -117,18 +116,19 @@ footer {
 
 .footer .nav.item {
 	display: inline-block;
-	font-family: 'Playfair Display', serif;
+	font-family: 'PFFuturaNeuBook', sans-serif;
 	font-size: 12px;
 	font-weight: normal;
 	font-style: normal;
 	font-stretch: normal;
 	line-height: 1.17;
+	letter-spacing: 1.5px;
 	color: #252623;
 	padding:24px;
 }
 
 .page-footer {
-	height: 223px;
+	height: auto;
 }
 
 .footer.links{
@@ -165,12 +165,13 @@ footer {
 	font-family: 'PFFuturaNeuMedium', sans-serif;
 }
 
-.page-header .site__nav ul li a.selected:after {
+.page-header .site__nav ul li a.selected:after,
+.footer .nav.item a.selected:after {
 	content: "";
     width: 5px;
     height: 5px;
     background-color: #252623;
-    border-radius: 10px;
+    border-radius: 100%;
     display: block;
     position: relative;
     float: none;
@@ -204,7 +205,7 @@ footer {
 	width: 100%;
 	height: 100%;
 	display: inline-block;
-	right: 15px;
+	right: 25px;
 	bottom: 0;
 	z-index: -1;
 }
@@ -213,11 +214,24 @@ h1.banana-h1 {
 	font-family: 'PFFuturaNeuMedium', sans-serif;
 	font-size: 186px;
 	font-weight: normal;
+	letter-spacing: 0.8px;
 	color: #f7f1e9;
 	position: absolute;
 	top: -140px;
 	left: -60px;
 	z-index: -1;
+}
+
+.rotate-90 {
+	-webkit-transform: rotate(-90deg) translate(-50%,-100%);
+	-ms-transform: rotate(-90deg) translate(-50%,-100%);
+	transform: rotate(-90deg) translate(-50%,-100%);
+}
+
+.banana-slider-img {
+	z-index: -1;
+	top: 0;
+	left: 0;
 }
 
 
