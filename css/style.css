@@ -36,8 +36,11 @@
 .mt-0 {margin-top: 0px !important;}
 .mt-10 {margin-top: 10px !important;}
 .mt-20 {margin-top: 20px !important;}
+.mb-25 {margin-bottom: 25px !important;}
+.mt-30 {margin-top: 30px !important;}
 .mt-50 {margin-top: 50px !important;}
 .mt-70 {margin-top: 70px !important;}
+.mt-100 {margin-top: 100px !important;}
 .mt-120 {margin-top: 120px !important;}
 .only {padding-left: 0; padding-right: 0;}
 .first {padding-left: 0;}
@@ -45,6 +48,12 @@
 .p-relative {position: relative;}
 .p-absolute {position: absolute;}
 .fz-90 {font-size: 90px;}
+
+:hover {
+	-webkit-transition: all 0.2s;
+	-moz-transition: all 0.2s;
+	transition: all 0.2s;
+}
 
 a.selected {font-weight: bold;}
 
@@ -160,7 +169,7 @@ footer {
 	text-align: left;
 	color: #f1f1f1;
 	position: absolute;
-	top:0px;
+	top:-70px;
 	left:0px;
 }
 
@@ -184,7 +193,9 @@ footer {
 }
 
 .text-img h3,
-.banana-slide-text h3 {
+.banana-slide-text h3,
+.home-slider1 h2,
+.contact-form h3 {
 	font-size: 40px;
 	margin-bottom: 56px;
 }
@@ -264,13 +275,41 @@ h1.banana-h1,
 	background-size: contain;
 }
 
-.banana-slider .owl-nav {
+.banana-slider .owl-nav,
+.home-slider1 .owl-nav {
 	position: absolute;
 	top: 50px;
 	right: calc(50% - 40px);
 	right: 33.3vw;
 }
 
+.home-slider1 {
+	padding: 0 60px 0 0;
+}
+
+.home-slider1 .owl-nav {
+	top: 50%;
+	left: 0;
+	width: 100%;
+	-webkit-transform: translate(0,-50%);
+	-ms-transform: translate(0,-50%);
+	transform: translate(0,-50%);
+}
+
+.home-slider1 .owl-nav > * {
+	position: absolute;
+	margin: 0;
+}
+
+.home-slider1 .owl-nav .owl-prev {
+	display: none;
+}
+
+.home-slider1 .owl-nav .owl-next {
+	right: 0;
+}
+
+.home-slider1 .owl-nav > button,
 .banana-slider .owl-nav > button {
 	width: 72px;
 	height: 72px;
@@ -298,6 +337,73 @@ h1.banana-h1,
 	box-shadow: 0 -7px 36px rgba(0,0,0,.1);
 }
 
+.contact-form label,
+.contact-btn {
+	font-family: 'PFFuturaNeuMedium', sans-serif;
+	color: #d5c5ad;
+	font-size: 18px;
+	font-weight: normal;
+}
+
+.contact-form form label,
+.contact-form form input[type="text"],
+.contact-form form textarea,
+.contact-form form select {
+	width: 100%;
+}
+
+.contact-form form input[type="text"],
+.contact-form form textarea,
+.contact-form form select {
+	border: none;
+	border-bottom: solid 1px #252623;
+	padding: 5px 0 11px;
+}
+
+.contact-btn {
+	padding: 17px 70px;
+	background: transparent;
+	border: 2px solid #d5c5ad;
+	color: #252525;
+	text-transform: uppercase;
+}
+
+.contact-btn:hover {
+	box-shadow: inset 0 -70px #d5c5ad;
+	-webkit-transition: all 0.2s;
+	-moz-transition: all 0.2s;
+	transition: all 0.2s;
+}
+
+.contact-btn:after {
+	content: "";
+	width: 120px;
+	height: 2px;
+	background: #252525;
+	position: absolute;
+	right: -100px;
+	top: 16px;
+}
+
+.contact-map iframe {
+	width: 100%;
+	height: 650px;
+	border: none;
+	-webkit-box-shadow: 0 0px 36px rgba(0,0,0,.2);
+	-moz-box-shadow: 0 0px 36px rgba(0,0,0,.2);
+	box-shadow: 0 0px 36px rgba(0,0,0,.2);
+}
+
+.contact-map {
+	padding-bottom: 40px;
+}
+
+.owl-carousel .owl-nav button.owl-next:hover,
+.owl-carousel .owl-nav button.owl-prev:hover {
+	opacity: 0.7;
+}
+
+
 
 
 /*   RESPONSIVE   */
@@ -312,6 +418,17 @@ h1.banana-h1,
 }
 
 /* tablet portait */
+@media (min-width: 768px) {
+
+	.logo {
+		width: 175px;
+	}
+
+	.site__nav {
+		width: calc(100% - 180px);
+	}
+}
+
 @media (min-width: 768px) and (max-width: 1023px) {
 
 	.sm-f-right {float: right;}
@@ -321,6 +438,38 @@ h1.banana-h1,
 	.sm-ta-left {text-align: left !important;}
 	.sm-ta-right {text-align: right !important;}
 	.sm-ta-center {text-align: center !important;}
+
+	.logo {
+		width: 120px;
+	}
+
+	.logo img {
+		max-width: 120px;
+		height: auto;
+	}
+
+	.site__nav {
+		width: calc(100% - 120px);
+	}
+
+	.nav>li>a {
+		padding: 15px 6px;
+		font-size: 10px;
+	}
+
+	.text-img h3,
+	.banana-slide-text h3 {
+		font-size: 28px;
+	}
+
+	.banana-slide-text p,
+	.text-img p {
+		font-size: 14px;
+	}
+
+	h1.banana-h1, .banana-slide-right h2 {
+		font-size: 120px;
+	}
 
 }
 
@@ -346,6 +495,10 @@ h1.banana-h1,
 
 	.banana-slide-photos {
 		margin-top: 220px;
+	}
+
+	.contact-form form {
+		padding-right: 70px;
 	}
 	
 }
