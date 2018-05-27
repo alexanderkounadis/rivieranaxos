@@ -54,6 +54,29 @@
                     }
                 }
             });
+
+            jQuery('.owl-carousel.home-slider2').owlCarousel({
+                loop: true,
+                nav: false,
+                dots: true,
+                navText: [
+                "<i class='fas fa-chevron-left'></i>",
+                "<i class='fas fa-chevron-right'></i>"
+                ],
+                autoplay: true,
+                autoplayHoverPause: true,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 1
+                    },
+                    1000: {
+                        items: 1
+                    }
+                }
+            });
         });
 </script>
 
@@ -61,7 +84,7 @@
 <body data-container="body" class="cms-home cms-index-index page-layout-1column">
 	<div class="page-wrapper">
 		<header class="page-header col-xs-12">
-            <div class="header content col-xs-12 only container">
+            <div class="header content col-xs-12 only container mt-30">
                 <div id="o-wrapper" class="o-wrapper">
                     <span id="c-button--slide-left" data-action="toggle-nav" class="action nav-toggle c-button"><span>Toggle Nav</span></span>
                 </div>
@@ -70,12 +93,12 @@
                 </div>
                 <nav class="site__nav open ta-right xs-ta-center col-xs-12 only">
                     <ul class="nav nav--bar">
-                        <li><a href="/home.html" class="selected">HOME</a></li>
-                        <li><a href="/banana.html">BANANA</a></li>
-                        <li><a href="#">ISLAND</a></li>
-                        <li><a href="#">PATATOSPOROS</a></li>
-                        <li><a href="#">RIVIERA EVENTS</a></li>
-                        <li><a href="#">AMMOS - THE SHOP</a></li>                      
+                        <li><a href="home.html" class="selected">HOME</a></li>
+                        <li><a href="banana.html">BANANA</a></li>
+                        <li><a href="island.html">ISLAND</a></li>
+                        <li><a href="patatosporos.html">PATATOSPOROS</a></li>
+                        <li><a href="riviera-events.html">RIVIERA EVENTS</a></li>
+                        <li><a href="ammos-the-shop.html">AMMOS - THE SHOP</a></li>                     
                     </ul>
                 </nav>
             </div>
@@ -92,7 +115,7 @@
                         <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. </p>
                         <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.</p>
                     </div>
-                    <div class="col-xs-12 col-sm-6 home-slide-img"><img src="images/home-slide-1.jpg" alt="The adventure begins here!"></div>
+                    <div class="col-xs-12 col-sm-6 home-slider1-img"><img src="images/home-slide-1.jpg" alt="The adventure begins here!"></div>
                 </div>
                 <div class="home-slide-2">
                     <div class="col-xs-12 col-sm-6 border-left">
@@ -103,52 +126,65 @@
                         <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. </p>
                         <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.</p>
                     </div>
-                    <div class="col-xs-12 col-sm-6 home-slide-img"><img src="images/home-slide-1.jpg" alt="The adventure begins here!"></div>
+                    <div class="col-xs-12 col-sm-6 home-slider1-img"><img src="images/home-slide-1.jpg" alt="The adventure begins here!"></div>
+                </div>
+            </div>
+            
+            <div class="home-main2 p-relative col-xs-12 only mt-200">
+                <h2 class="serif title title-island">THE ISLAND</h2>
+                <div class="home-slider2 owl-carousel">
+                    <div class="home-slide2-1">
+                        <div class="home-slide2-title"> / OUR STORY</div>
+                        <div class="col-xs-12 home-slide-img"><img src="images/home-slide2-1.jpg" alt="The adventure begins here!"></div>
+                    </div>
+                    <div class="home-slide2-2">
+                        <div class="home-slide2-title"> / OUR STORY</div>
+                        <div class="col-xs-12 home-slide-img"><img src="images/home-slide2-1.jpg" alt="The adventure begins here!"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact col-xs-12 mt-100">
+                <div class="contact-form col-xs-12 col-md-5 border-left">
+                    <h3 class="serif mb-25 mt-0">Contact us!</h3>
+                    <p>
+                        Agia Anna - Naxos, Cyclades/Greece<br/>
+                        <a href="tel:+306978733402" class="c-000">+30 697 8733402</a><br/>
+                        <a href="mailto:info@weddingnaxos.com" class="c-000">info@weddingnaxos.com</a>
+                    </p>
+                    <form>
+                        <label for="fname" class="mt-30">First Name</label>
+                        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+                        <label for="lname" class="mt-30">Last Name</label>
+                        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+                        <select id="country" name="country" class="mt-50">
+                            <option value="australia">Service</option>
+                            <option value="canada">Service 2</option>
+                            <option value="usa">Service 3</option>
+                        </select>
+
+                        <textarea id="subject" name="subject" placeholder="Write something.." class="mt-50"></textarea>
+
+                        <button type="submit" title="Send" class="contact-btn p-relative mt-50">
+                            <span>Send</span>
+                        </button>
+                    </form>
+                </div>
+                <div class="contact-map col-xs-12 col-md-7">
+                    <iframe id="preview" allowfullscreen="" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJsWryXAsMmBQROKccN_K6Y84&amp;key=AIzaSyD4iE2xVSpkLLOXoyqT-RuPwURN3ddScAI"></iframe>
                 </div>
             </div>
         </div>
 
-        <div class="contact col-xs-12 mt-100">
-            <div class="contact-form col-xs-12 col-md-5 border-left">
-                <h3 class="serif mb-25 mt-0">Contact us!</h3>
-                <p>
-                    Agia Anna - Naxos, Cyclades/Greece<br/>
-                    <a href="tel:+306978733402" class="c-000">+30 697 8733402</a><br/>
-                    <a href="mailto:info@weddingnaxos.com" class="c-000">info@weddingnaxos.com</a>
-                </p>
-                <form>
-                    <label for="fname" class="mt-30">First Name</label>
-                    <input type="text" id="fname" name="firstname" placeholder="Your name..">
-
-                    <label for="lname" class="mt-30">Last Name</label>
-                    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-
-                    <select id="country" name="country" class="mt-50">
-                        <option value="australia">Service</option>
-                        <option value="canada">Service 2</option>
-                        <option value="usa">Service 3</option>
-                    </select>
-
-                    <textarea id="subject" name="subject" placeholder="Write something.." class="mt-50"></textarea>
-
-                    <button type="submit" title="Send" class="contact-btn p-relative mt-50">
-                        <span>Send</span>
-                    </button>
-                </form>                  
-            </div>
-
-            <div class="contact-map col-xs-12 col-md-7">
-                <iframe id="preview" allowfullscreen="" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJsWryXAsMmBQROKccN_K6Y84&amp;key=AIzaSyD4iE2xVSpkLLOXoyqT-RuPwURN3ddScAI"></iframe>
-            </div>
-        </div>
-
-
+        
         <footer class="page-footer col-xs-12 only ta-center pt-50 mt-50">
             <div class="footer content">
-                <div class="logo col-xs-12 ta-center">
+                <div class="logo col-xs-12 ta-center mb-10">
                     <a href="/"><img src="images/logo.png" alt="Naxos Riviera logo" width="173.8" height="165.3"></a>
                 </div>
-                <ul class="footer links ta-center">
+                <ul class="footer links ta-center col-xs-12">
                     <li class="nav item"><a href="#" class="selected">HOME</a></li>
                     <li class="nav item"><a href="#">BANANA</a></li>
                     <li class="nav item"><a href="#">ISLAND</a></li>
