@@ -518,7 +518,8 @@ h2.title-experiences {
 	opacity: 0.7;
 }
 
-.filter-content .filter {
+.filter-content .filter,
+.prod-tag {
 	display: inline-block;
 	border-radius: 3px;
 	background-color: #f1f1f1;
@@ -528,13 +529,32 @@ h2.title-experiences {
 }
 
 .filter-content .filter.selected,
-.filter-content .filter:hover {
+.filter-content .filter:hover,
+.prod-tag:hover {
 	color: #252623;
 	background-color: #c7c7c7;
 }
 
 .filter-content .filter.selected {
 	display: table;
+}
+
+.grid {
+	
+}
+
+.grid:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.grid-item {
+	width: 33.33%;
+	height: auto;
+	padding: 0 15px;
+	float: left;
+	margin-bottom: 25px;
 }
 
 
