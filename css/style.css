@@ -225,7 +225,8 @@ footer {
 	margin-bottom: 0;
 }
 
-.contact-map:after {
+.contact-map:after,
+body.page-ammos-shop .main-content > .container:after {
 	content: "";
 	background: url(../images/circles-bg-contact.svg) no-repeat 0% 100%; 
 	position: absolute;
@@ -234,6 +235,17 @@ footer {
 	bottom: -50px;
 	left: -25px;
 	z-index: -1
+}
+
+body.page-ammos-shop .main-content > .container:after {
+	left: auto;
+	right: -30px;
+	top: 40vh;
+	height: -webkit-fill-available;
+}
+
+body.page-ammos-shop .main-content > .container {
+	overflow: hidden;
 }
 
 .contact:before {
@@ -473,12 +485,14 @@ h2.title-experiences {
 
 .contact-btn,
 .explore-btn {
-	padding: 17px 70px;
+	padding: 17px 20px;
 	background: transparent;
 	border: 2px solid #d5c5ad;
 	color: #252525;
 	text-transform: uppercase;
 	display: inline-block;
+	width: 195px;
+	text-align: center;
 }
 
 .contact-btn:hover,
@@ -557,6 +571,11 @@ h2.title-experiences {
 	margin-bottom: 25px;
 }
 
+body.page-ammos-shop .main-content > .container .right-column > img {
+	width: 100%;
+	max-width: 327px;
+}
+
 
 
 
@@ -565,9 +584,16 @@ h2.title-experiences {
 /* mobile */
 @media (max-width: 767px) {
 
+	.xs-only {padding-left: 0; padding-right: 0;}
 	.xs-ta-left {text-align: left !important;}
 	.xs-ta-right {text-align: right !important;}
 	.xs-ta-center {text-align: center !important;}
+
+	.hidden-xs {display: none;}
+
+	.grid-item {
+		width: 50%;
+	}
 
 }
 
