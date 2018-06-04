@@ -53,6 +53,7 @@
 .last {padding-right: 0;}
 .p-relative {position: relative;}
 .p-absolute {position: absolute;}
+.fz-24 {font-size: 24px;}
 .fz-90 {font-size: 90px;}
 
 :hover {
@@ -226,7 +227,8 @@ footer {
 }
 
 .contact-map:after,
-body.page-ammos-shop .main-content > .container:after {
+body.page-ammos-shop .main-content > .container:after,
+.events-main-gallery .gallery-grid:after {
 	content: "";
 	background: url(../images/circles-bg-contact.svg) no-repeat 0% 100%; 
 	position: absolute;
@@ -242,6 +244,11 @@ body.page-ammos-shop .main-content > .container:after {
 	right: -30px;
 	top: 40vh;
 	height: -webkit-fill-available;
+}
+
+.events-main-gallery .gallery-grid:after {
+	left: auto;
+	right: -30px;
 }
 
 body.page-ammos-shop .main-content > .container {
@@ -262,10 +269,18 @@ body.page-ammos-shop .main-content > .container {
 	left:0px;
 }
 
-.page-header .site__nav ul li a.selected {
+.page-header .site__nav ul li a.selected,
+.events-main-text .date-events,
+.events-main-text h2 {
 	font-weight: normal;
 	font-family: 'PFFuturaNeuMedium', sans-serif;
 }
+
+.events-main-text p {
+	font-family: 'PFFuturaNeuBook', sans-serif;
+	font-weight: normal;
+}
+
 
 .page-header .site__nav ul li a.selected:after,
 .footer .nav.item a.selected:after {
@@ -319,7 +334,8 @@ h3.title {
 h1.banana-h1,
 .banana-slide-right h2,
 h2.title-island,
-h2.title-experiences {
+h2.title-experiences,
+h3.gallery-title {
 	font-family: 'PFFuturaNeuMedium', sans-serif;
 	font-size: 186px;
 	font-size: 10vw;
@@ -340,10 +356,15 @@ h2.title-experiences {
 	top: -19vw;
 }
 
-.banana-slide-right h2 {
+.banana-slide-right h2,
+h3.gallery-title {
 	color: #f1f1f1;
 	left: 80px;
 	top: -100px;
+}
+
+h3.gallery-title {
+	left: -50px;
 }
 
 .banana-slide-text p,
@@ -576,6 +597,20 @@ body.page-ammos-shop .main-content > .container .right-column > img {
 	max-width: 327px;
 }
 
+.date-events {
+	color: #c7c7c7;
+	font-size: 14px;
+	margin: 30px 0 20px;
+}
+
+.gallery-grid a > img {
+	width: 100%;
+}
+
+.gallery-grid > a {
+	padding: 25px;
+}
+
 
 
 
@@ -595,6 +630,10 @@ body.page-ammos-shop .main-content > .container .right-column > img {
 		width: 50%;
 	}
 
+	.gallery-grid > a {
+		padding: 25px;
+	}
+
 }
 
 /* tablet portait */
@@ -612,7 +651,7 @@ body.page-ammos-shop .main-content > .container .right-column > img {
 		width: calc(100% - 180px);
 	}
 
-	.main-content {
+	.body:not(.events) main-content {
 		margin-top: 120px;
 	}
 }
