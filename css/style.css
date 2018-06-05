@@ -53,6 +53,7 @@
 .last {padding-right: 0;}
 .p-relative {position: relative;}
 .p-absolute {position: absolute;}
+.fz-12 {font-size: 12px;}
 .fz-24 {font-size: 24px;}
 .fz-90 {font-size: 90px;}
 
@@ -120,6 +121,8 @@ footer {
 }
 
 .home-slider1-img img {
+	-webkit-box-shadow: 0px 0px 50px 0px rgba(0,0,0,.3);
+	-moz-box-shadow: 0px 0px 50px 0px rgba(0,0,0,.3);
 	box-shadow: 0px 0px 50px 0px rgba(0,0,0,.3);
 }
 
@@ -269,6 +272,7 @@ body.page-ammos-shop .main-content > .container {
 	left:0px;
 }
 
+.font-medium,
 .page-header .site__nav ul li a.selected,
 .events-main-text .date-events,
 .events-main-text h2 {
@@ -603,12 +607,50 @@ body.page-ammos-shop .main-content > .container .right-column > img {
 	margin: 30px 0 20px;
 }
 
-.gallery-grid a > img {
+.gallery-grid a > img,
+.events-more-wrapper img {
 	width: 100%;
 }
 
 .gallery-grid > a {
 	padding: 25px;
+}
+
+.more-events-text-wrapper > a {
+	display: block;
+}
+
+.more-events-text-wrapper {
+	background: #fff;
+	width: calc(100% - 30px);
+	padding: 0 30px 30px;
+	display: inline-block;
+	margin: -30px auto 30px;
+	float: none;
+	text-align: left;
+	-webkit-box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.09);
+	-moz-box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.09);
+	box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.09);
+	position: relative;
+}
+
+.more-events-text-wrapper .continue-reading {
+	color: #c7c7c7;
+	margin-top: 20px;
+}
+
+.more-events-text-wrapper .continue-reading:before {
+	content: "";
+	width: 7px;
+	height: 7px;
+	border-radius: 100%;
+	border: 2px solid #91c9cc;
+	display: inline-block;
+	margin-right: 5px;
+}
+
+.more-events-title {
+	color: #252623;
 }
 
 
