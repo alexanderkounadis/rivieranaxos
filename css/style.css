@@ -54,8 +54,12 @@
 .p-relative {position: relative;}
 .p-absolute {position: absolute;}
 .fz-12 {font-size: 12px;}
+.fz-18 {font-size: 18px;}
 .fz-24 {font-size: 24px;}
+.fz-40 {font-size: 40px;}
 .fz-90 {font-size: 90px;}
+.c-000 {color: #000000;}
+.c-charcoal {color: #252623;}
 
 :hover {
 	-webkit-transition: all 0.2s;
@@ -231,7 +235,7 @@ footer {
 
 .contact-map:after,
 body.page-ammos-shop .main-content > .container:after,
-.events-main-gallery .gallery-grid:after {
+.events-main-gallery:after {
 	content: "";
 	background: url(../images/circles-bg-contact.svg) no-repeat 0% 100%; 
 	position: absolute;
@@ -249,9 +253,9 @@ body.page-ammos-shop .main-content > .container:after {
 	height: -webkit-fill-available;
 }
 
-.events-main-gallery .gallery-grid:after {
+.events-main-gallery:after {
 	left: auto;
-	right: -30px;
+	right: -10px;
 }
 
 body.page-ammos-shop .main-content > .container {
@@ -280,6 +284,7 @@ body.page-ammos-shop .main-content > .container {
 	font-family: 'PFFuturaNeuMedium', sans-serif;
 }
 
+.font-book,
 .events-main-text p {
 	font-family: 'PFFuturaNeuBook', sans-serif;
 	font-weight: normal;
@@ -651,7 +656,48 @@ body.page-ammos-shop .main-content > .container .right-column > img {
 
 .more-events-title {
 	color: #252623;
+	min-height: 68px;
 }
+
+.contact-events {
+	background-size: 6px;
+	background-repeat: repeat-y;
+	padding: 0px 5px;
+	width: 340px;
+	float: right;
+	position: relative;
+	margin-top: 65px;
+}
+
+.contact-events-inner {
+	border-left-style: double;
+	border-right-style: double;
+	border-color: #bde2e4;
+	border-width: 6px;
+	padding: 30px 50px;
+}
+
+.contact-events:before,
+.contact-events:after {
+	content: "";
+	background: url('../images/frame-contact-top.png') 50% 0 no-repeat;
+	background-size: contain;
+	display: inline-block;
+	width: 100%;
+	height: 120px;
+	position: absolute;
+	left: 0;
+	top: -70px;
+	z-index: -1;
+}
+
+.contact-events:after {
+	background: url('../images/frame-contact-bottom.png') 50% 100% no-repeat;
+	background-size: contain;
+	bottom: -70px;
+	top: auto;
+}
+
 
 
 
@@ -676,6 +722,18 @@ body.page-ammos-shop .main-content > .container .right-column > img {
 		padding: 25px;
 	}
 
+	.contact-events {
+		width: 100%;
+		max-width: 340px;
+		float: none;
+		display: inline-block;
+		margin: 70px auto 10px;
+	}
+
+	.contact-events-inner {
+		padding: 0px 10vw;
+	}
+
 }
 
 /* tablet portait */
@@ -696,6 +754,11 @@ body.page-ammos-shop .main-content > .container .right-column > img {
 	.body:not(.events) main-content {
 		margin-top: 120px;
 	}
+
+	.events-more {
+		width: calc(100% - 340px);
+	}
+
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -740,6 +803,10 @@ body.page-ammos-shop .main-content > .container .right-column > img {
 		font-size: 120px;
 	}
 
+	.events-more > div:last-child {
+		display: none;
+	}
+
 }
 
 /* tablet landscape */
@@ -754,6 +821,15 @@ body.page-ammos-shop .main-content > .container .right-column > img {
 	.md-ta-left {text-align: left !important;}
 	.md-ta-right {text-align: right !important;}
 	.md-ta-center {text-align: center !important;}
+
+	.events-more > div:last-child {
+		display: none;
+	}
+
+	.nav>li>a {
+		padding: 10px 12px;
+		font-size: 13px;
+	}
 
 }
 
@@ -776,4 +852,11 @@ body.page-ammos-shop .main-content > .container .right-column > img {
 		font-size: 4vw;
 	}
 	
+}
+
+@media (min-width: 1600px) {
+
+	.events-main-gallery:after {
+		right: -30px;
+	}
 }
