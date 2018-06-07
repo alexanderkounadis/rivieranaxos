@@ -54,6 +54,7 @@
 .p-relative {position: relative;}
 .p-absolute {position: absolute;}
 .fz-12 {font-size: 12px;}
+.fz-16 {font-size: 16px;}
 .fz-18 {font-size: 18px;}
 .fz-24 {font-size: 24px;}
 .fz-40 {font-size: 40px;}
@@ -696,6 +697,38 @@ body.page-ammos-shop .main-content > .container .right-column > img {
 	background-size: contain;
 	bottom: -70px;
 	top: auto;
+}
+
+.go-back {
+	padding: 0 25px;
+	-webkit-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	transform: rotate(90deg);
+	display: inline-block;
+	position: fixed;
+	top: 50vh;
+    left: -75px;
+}
+
+.go-back:after {
+	content: "";
+	background: #d5c5ad;
+	width: 140px;
+	height: 2px;
+	position: absolute;
+	left: 10px;
+	top: 10px;
+}
+
+.go-back:before {
+	content: "";
+	background: url('../images/arrow-beige-left.svg') no-repeat 0 50%;
+	width: 8px;
+	height: 15px;
+	position: absolute;
+	left: 8px;
+	top: 4px;
+	background-size: 9px;
 }
 
 
