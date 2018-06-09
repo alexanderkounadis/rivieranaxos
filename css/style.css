@@ -65,6 +65,7 @@
 .fz-90 {font-size: 90px;}
 .fz-180 {font-size: 180px; line-height: 180px;}
 .c-000 {color: #000000;}
+.c-fff {color: #ffffff;}
 .c-charcoal {color: #252623;}
 .c-light-grey {color: #f1f1f1 !important;}
 .c-light-blue {color: #eaf5f6 !important;}
@@ -848,6 +849,33 @@ body.page-events .contact-events {
 	width: 160px;
 	height: 160px;
 	box-sizing: content-box;
+}
+
+.page-intro {
+	background: url('../images/intro.jpg') no-repeat 50% 50%;
+	background-size: cover;
+}
+
+.intro-nav .intro-nav-item {
+	display: inline-block;
+	margin: 10px 26px;
+	vertical-align: sub;
+}
+
+.intro-nav .intro-nav-item a {
+	color: #ffffff;
+}
+
+.white-big-logo {
+	width: 75%;
+	max-width: 550px;
+}
+
+.intro-logo {
+	margin-top: 40%;
+	-webkit-transform: translate(0,-50%);
+	-ms-transform: translate(0,-50%);
+	transform: translate(0,-50%);
 }
 
 
