@@ -31,8 +31,35 @@
     <meta name="theme-color" content="#c4b892">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
+    <script type="text/javascript">
+    jQuery(document).ready(function(){
+        jQuery('.owl-carousel.events-slider').owlCarousel({
+                loop: true,
+                nav: true,
+                dots: false,
+                navText: [
+                "<i class='fas fa-chevron-left'></i>",
+                "<i class='fas fa-chevron-right'></i>"
+                ],
+                autoplay: true,
+                autoplayHoverPause: true,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 1
+                    },
+                    1000: {
+                        items: 1
+                    }
+                }
+            });
+        });
+    </script>
+
 </head>
-<body data-container="body" class="page-events">
+<body data-container="body" class="page-events-index">
 	<div class="page-wrapper">
 		<header class="page-header col-xs-12">
             <div class="header content col-xs-12 only container mt-30">
@@ -55,8 +82,8 @@
             </div>
         </header>
 
-        <div class="main-content col-xs-12">
-            <div class="text-img col-xs-12 container">
+        <div class="main-content col-xs-12 xs-only">
+            <div class="text-img col-xs-12 xs-only container">
                 <div class="col-xs-12 col-sm-6 border-left mt-50">
                     <h3 class="serif">Get married in Naxos</h3>
                     <p>Most of us have dreamt of exchanging our vows and committing to each other in a beautiful, quaint church by the sea… </p>
@@ -66,6 +93,57 @@
                 </div>
                 <div class="col-xs-12 col-sm-6 last"><img src="images/get-married-in-naxos.jpg" alt="Get married in Naxos" class="col-xs-12 xs-only last"></div>
             </div>
+
+            <div class="events-menu col-xs-12 ta-center">
+                <img src="images/events-menu.jpg" class="col-xs-12">
+                <div class="events-menu-container col-xs-12">
+                    <div class="font-book c-charcoal fz-18 active"><span class="serif fz-90">01</span><p>/ &nbsp;  DREAM</p></div>
+                    <div class="font-book c-charcoal fz-18"><span class="serif fz-90">02</span><p>/ &nbsp;  PLAN</p></div>
+                    <div class="font-book c-charcoal fz-18"><span class="serif fz-90">03</span><p>/ &nbsp;  BOOK</p></div>
+                    <div class="font-book c-charcoal fz-18"><span class="serif fz-90">04</span><p>/ &nbsp;  EXPERIENCE</p></div>
+                    <div class="font-book c-charcoal fz-18"><span class="serif fz-90">05</span><p>/ &nbsp;  TIPS</p></div>
+                </div>
+            </div>
+
+            <div class="p-relative col-xs-12 only mt-10">
+                <div class="events-slider owl-carousel">
+                    <div class="events-slide-1">
+                        <div class="col-xs-12 col-sm-6 events-slider-left p-relative">
+                            <h3 class="title title-dreams c-light-grey">DREAMS <br/>DO <br/>COME <br/>TRUE</h3>
+                            <p class="serif fz-38 ltr-sp--1" style="max-width: 470px;">Most of us have dreamt <br/>of exchanging our vows and committing to each other in a beautiful, <br/>quaint church by the sea…</p>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 home-slide-text font-book fz-18 pt-100">
+                            <h3 class="serif title">Make your dream!</h3>
+                            <p>This type of setting is ideal to unite with your loved one, and summer is the best time of year for such an occasion. A beach wedding can be magical, romantic as well as enchanting, especially near the crystal clear Aegean waters.</p>
+                            <p>Whether your style is traditional, rock, bohemian, vintage, casual or posh, here on Naxos we can cater to suit a variety of individual styles. You can have a wedding that will surely reflect your personality and identity. Naxos is undoubtedly a perfect wedding location as it offers a variety of venues to host this very special celebration for you and your guests. Being a three and a half hour ferry ride from the port of Piraeus, and a 30 minute flight from Eleftherios Venizelos Airport, Naxos is easily accessible. </p>
+                            <p>Naxos is an island with distinct features, Cycladic beauty, and exquisite but rare scenery. The island offers an array of small romantic white washed churches scattered all over the area. For example, by the seaside, on a mountain top, in a valley, in an orchard or wherever your heart desires. You are sure to find the perfect spot for your wedding on the island of Naxos!</p>
+                        </div>
+                        <div class="col-xs-12 col-md-11 xs-only f-right mt-100 xs-mt-20">
+                            <img src="images/events-gallery/events-dream-1.jpg" class="col-xs-4">
+                            <img src="images/events-gallery/events-dream-2.jpg" class="col-xs-4">
+                            <img src="images/events-gallery/events-dream-3.jpg" class="col-xs-4">
+                        </div>
+                    </div>
+                    <div class="home-slide3-2">
+                        <div class="col-xs-12 col-sm-6 events-slider-left p-relative">
+                            <h3 class="title title-dreams c-light-grey">DREAMS <br/>DO <br/>COME <br/>TRUE</h3>
+                            <p class="serif fz-38 ltr-sp--1" style="max-width: 470px;">Most of us have dreamt <br/>of exchanging our vows and committing to each other in a beautiful, <br/>quaint church by the sea…</p>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 home-slide-text font-book fz-18 pt-100">
+                            <h3 class="serif title">Make your dream!</h3>
+                            <p>This type of setting is ideal to unite with your loved one, and summer is the best time of year for such an occasion. A beach wedding can be magical, romantic as well as enchanting, especially near the crystal clear Aegean waters.</p>
+                            <p>Whether your style is traditional, rock, bohemian, vintage, casual or posh, here on Naxos we can cater to suit a variety of individual styles. You can have a wedding that will surely reflect your personality and identity. Naxos is undoubtedly a perfect wedding location as it offers a variety of venues to host this very special celebration for you and your guests. Being a three and a half hour ferry ride from the port of Piraeus, and a 30 minute flight from Eleftherios Venizelos Airport, Naxos is easily accessible. </p>
+                            <p>Naxos is an island with distinct features, Cycladic beauty, and exquisite but rare scenery. The island offers an array of small romantic white washed churches scattered all over the area. For example, by the seaside, on a mountain top, in a valley, in an orchard or wherever your heart desires. You are sure to find the perfect spot for your wedding on the island of Naxos!</p>
+                        </div>
+                        <div class="col-xs-12 col-md-11 xs-only f-right mt-100 xs-mt-20">
+                            <img src="images/events-gallery/events-dream-1.jpg" class="col-xs-4">
+                            <img src="images/events-gallery/events-dream-2.jpg" class="col-xs-4">
+                            <img src="images/events-gallery/events-dream-3.jpg" class="col-xs-4">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="events-main p-relative col-xs-12 only mt-30">
                 <div class="events-main-img col-xs-12 only">
                     <img src="images/events1.jpg" class="col-xs-12 only" alt="Elena & Andreas wedding styling">
