@@ -36,7 +36,6 @@
 .mt-0 {margin-top: 0px !important;}
 .mt-10 {margin-top: 10px !important;}
 .mt-20 {margin-top: 20px !important;}
-.mb-25 {margin-bottom: 25px !important;}
 .mt-30 {margin-top: 30px !important;}
 .mt-50 {margin-top: 50px !important;}
 .mt-60 {margin-top: 60px !important;}
@@ -46,7 +45,9 @@
 .mt-200 {margin-top: 200px !important;}
 .mt-300 {margin-top: 300px !important;}
 .mb-10 {margin-bottom: 10px !important;}
+.mb-25 {margin-bottom: 25px !important;}
 .mb-50 {margin-bottom: 50px !important;}
+.mb-200 {margin-bottom: 200px !important;}
 .pt-50 {padding-top: 50px !important;}
 .pt-100 {padding-top: 100px !important;}
 .padding-20 {padding: 20px;}
@@ -62,10 +63,14 @@
 .fz-38 {font-size: 38px;}
 .fz-40 {font-size: 40px;}
 .fz-90 {font-size: 90px;}
+.fz-180 {font-size: 180px; line-height: 180px;}
 .c-000 {color: #000000;}
 .c-charcoal {color: #252623;}
 .c-light-grey {color: #f1f1f1 !important;}
+.c-light-blue {color: #eaf5f6 !important;}
+.c-blue {color: #91c9cc !important;}
 .ltr-sp--1 {letter-spacing: -1px;}
+.to-center {margin-left: auto; margin-right: auto; float: none;}
 
 :hover {
 	-webkit-transition: all 0.2s;
@@ -173,6 +178,22 @@ footer {
 	left: -15px;
 	top: 50%;
 	width: auto;
+}
+
+.instagram-slider .owl-dots {
+	margin-top: 10px;
+}
+
+.instagram-slider .owl-dots .owl-dot {
+	border: solid 2px #c7c7c7;
+	width: 10px;
+	height: 10px;
+	border-radius: 10px;
+	margin: 3px;
+}
+
+.instagram-slider .owl-dots .owl-dot.active {
+	border-color: #91c9cc;
 }
 
 .home-main2 .home-slider2:before {
@@ -666,12 +687,14 @@ body.page-ammos-shop .main-content > .container .right-column > img {
 	position: relative;
 }
 
-.more-events-text-wrapper .continue-reading {
+.more-events-text-wrapper .continue-reading,
+.continue-reading {
 	color: #c7c7c7;
 	margin-top: 20px;
+	vertical-align: bottom;
 }
 
-.more-events-text-wrapper .continue-reading:before {
+.continue-reading:before {
 	content: "";
 	width: 7px;
 	height: 7px;
@@ -679,6 +702,7 @@ body.page-ammos-shop .main-content > .container .right-column > img {
 	border: 2px solid #91c9cc;
 	display: inline-block;
 	margin-right: 5px;
+	margin-bottom: 2px;
 }
 
 .more-events-title {
@@ -690,10 +714,14 @@ body.page-ammos-shop .main-content > .container .right-column > img {
 	background-size: 6px;
 	background-repeat: repeat-y;
 	padding: 0px 5px;
-	width: 340px;
+	width: 100%;
 	float: right;
 	position: relative;
 	margin-top: 65px;
+}
+
+body.page-events .contact-events {
+	width: 340px;
 }
 
 .contact-events-inner {
@@ -701,7 +729,7 @@ body.page-ammos-shop .main-content > .container .right-column > img {
 	border-right-style: double;
 	border-color: #bde2e4;
 	border-width: 6px;
-	padding: 30px 50px;
+	padding: 30px 2vw;
 }
 
 .contact-events:before,
@@ -795,6 +823,33 @@ body.page-ammos-shop .main-content > .container .right-column > img {
 	transform: translate(0,-70%);
 }
 
+.wedding-video {
+	height: -webkit-fill-available;
+	height: 40vw;
+	max-height: 608px;
+}
+
+.mariakorre-note {
+	border: solid 2px #d5c5ad;
+	padding: 25px;
+}
+
+.mariakorre-note-inner {
+	max-width: 290px;
+}
+
+.mariakorre-note:before {
+	content: "";
+	position: absolute;
+	top: -60px;
+	left: -60px;
+	background: url('../images/frame-floral.png') #fff no-repeat 0 0;
+	background-size: 160px;
+	width: 160px;
+	height: 160px;
+	box-sizing: content-box;
+}
+
 
 
 
@@ -808,11 +863,11 @@ body.page-ammos-shop .main-content > .container .right-column > img {
 	.xs-ta-left {text-align: left !important;}
 	.xs-ta-right {text-align: right !important;}
 	.xs-ta-center {text-align: center !important;}
-
 	.xs-mt-20 {margin-top: 20px !important;}
 	.xs-mt-50 {margin-top: 50px !important;}
-
+	.xs-mb-20 {margin-bottom: 20px !important;}
 	.hidden-xs {display: none;}
+	.xs-fz-38 {font-size: 38px; line-height: 38px;}
 
 	.grid-item {
 		width: 50%;
@@ -859,7 +914,7 @@ body.page-ammos-shop .main-content > .container .right-column > img {
 		margin-top: 120px;
 	}
 
-	.events-more {
+	body.page-events .events-more {
 		width: calc(100% - 340px);
 	}
 
@@ -956,6 +1011,14 @@ body.page-ammos-shop .main-content > .container .right-column > img {
 		font-size: 4vw;
 	}
 	
+}
+
+@media (min-width: 1440px) {
+
+	.contact-events-inner {
+		padding: 30px 50px;
+	}
+
 }
 
 @media (min-width: 1600px) {
